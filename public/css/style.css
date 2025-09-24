@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom background color class */
+.bg-primary-green {
+    background-color: #0c9971 !important;
+    color: #fff;
+}
+
+/* Navbar css */
+.nav-link {
+    background: #fff;
+    color: #4a148c;
+    border: 1px solid #ddd;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background: #f5f5f5;
+    color: #2e0854;
+}
+
+.nav-link.active {
+    background: #81c0ff;
+    color: #fff !important;
+}
+
+.nav-link > span {
+    margin-right: 6px;
+}
+.nav-link.active {
+    color: black !important;
+}
+
+/* Container */
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+/* Common Layout Section */
+.layout-section {
+    padding-top: 15px;
+    overflow-y: auto;
+}
+
+/* Left Sidebar */
+.layout-sidebar-left {
+    flex: 0 0 25%;
+    max-width: 280px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ccc;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+/* Center Content */
+.layout-content-center {
+    flex: 1;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+/* Right Sidebar */
+.layout-sidebar-right {
+    flex: 0 0 25%;
+    max-width: 400px;
+    background-color: #f8f9fa;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    .layout-sidebar-left,
+    .layout-sidebar-right {
+        display: none !important;
+    }
+
+    .layout-content-center {
+        padding-left: 1px !important;
+        padding-right: 1px !important;
+    }
+}
+
+/* index page */
+.btn-tab.active {
+    background-color: #212529 !important;
+    color: #28a745 !important;
+    border-color: #212529 !important;
+}
+
+.btn-tab {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    white-space: nowrap;
+}
+
+.tab-img {
+    height: 120px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-slide {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.provider-img {
+    height: 70px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-game-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.all_games {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.all_games::-webkit-scrollbar {
+    display: none;
+}
+
+.providers_slider,
+.cards_slider {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.providers_slider::-webkit-scrollbar,
+.cards_slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile specific changes */
+@media (max-width: 576px) {
+    .tab-img {
+        height: 90px;
+        width: 140px;
+    }
+
+    .card-game-img {
+        height: 120px;
+    }
+
+    /* Container ke liye full width aur 1 gap padding */
+    .container {
+        max-width: 100% !important;
+        padding-left: 0.1rem !important; 
+        padding-right: 0.1rem !important;
+        padding-top: 0.1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Main layout padding*/
+    .layout-content-center.p-1 {
+        padding: 0.25rem !important;
+    }
+
+    /* Cards ke side margin*/
+    .card {
+        margin-left: 0.25rem !important;
+        margin-right: 0.25rem !important;
+    }
+
+    /* Scroll containers gap aur padding */
+    .all_games,
+    .providers_slider,
+    .cards_slider {
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+        gap: 0.25rem !important;
+    }
+}
+
+/* for all 1,X,2 design */
+.btn-pair-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.match-layout {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left-side {
+    text-align: right;
+    font-size: 0.875rem;
+    color: #198754;
+    white-space: nowrap;
+    min-width: 70px;
+}
+
+.middle-divider {
+    border-left: 2px solid #d6d6d6;
+    height: 40px;
+}
+
+.right-side {
+    font-weight: bold;
+    line-height: 1.2;
+}
+/* Indian game ka */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.container.indian-card-container {
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+
+/* Scrollbar */
+.scrollbar-thin {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-bar-logo-indian {
+    height: 40px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+/* 🔹 Provider button (jo repeat ho raha tha) */
+.provider-btn {
+    display: inline-block;
+    padding: 0.5rem;           
+    border-radius: 0.5rem;    
+    flex-shrink: 0;
+    background-color: #d1d2d3; 
+    border: 1px solid #b1b1b1; 
+    transition: 0.3s;
+}
+.provider-btn:hover {
+    background-color: #70f57b; 
+}
+
+/* 🔹 Main image banner */
+.main-image-banner {
+    height: 180px;
+}
+.main-image {
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0.5rem;
+}
+
+/* 🔹 Game image grid */
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.game-image:hover {
+    transform: scale(1.05);
+}
+
