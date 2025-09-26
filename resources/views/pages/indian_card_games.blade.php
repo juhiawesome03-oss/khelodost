@@ -30,11 +30,8 @@
             </div>
             <!-- Main Image Banner -->
             <div class="mb-3 rounded-3 overflow-hidden" style="height:200px;">
-    <img src="{{ asset('images/image.webp') }}" 
-         alt="Live Roulette"
-         class="w-100 h-100">
-</div>
-
+                <img src="{{ asset('images/image.webp') }}" alt="Live Roulette" class="w-100 h-100">
+            </div>
 
             <!-- Grid of Buttons -->
             <div class="row row-cols-2 row-cols-md-4 g-2">

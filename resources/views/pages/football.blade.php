@@ -1,290 +1,67 @@
 @extends('sports_master')
 
 @section('sports_body')
-    <main class="layout-content-center p-3">
-        <div class="card shadow-sm mb-4">
-            <div class="card-body p-0">
-                <table class="table table-bordered text-center mb-0 align-middle">
-                    <thead class="table-light">
-                        <tr>
-                            <th class="text-start" style="width: 40%">⚽Football</th>
-                            <th style="width: 20%">1</th>
-                            <th style="width: 20%">X</th>
-                            <th style="width: 20%">2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Today</div>
-                                        <div>6:00 PM</div>
-                                    </div>
+<main class="layout-content-center p-3">
+    <div class="card-body p-0">
+        <table class="table text-center mb-0 align-middle odds-table">
+            <thead class="table-light">
+                <tr>
+                    <th class="text-start fw-bold" style="width: 40%">⚽ Football</th>
+                    <th style="width: 20%">1</th>
+                    <th style="width: 20%">X</th>
+                    <th style="width: 20%">2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- LIVE Match -->
+                <tr>
+                    <td class="text-start px-3">
+                        <div class="match-layout">
+                            <span class="match-status live">LIVE</span>
+                            <div class="right-side">
+                                <div>Nottinghamshire</div>
+                                <div>Warwickshire</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a class="odd-btn">2.28<br><small>9.98</small></a></td>
+                    <td><a class="odd-btn">7.8<br><small>4.27</small></a></td>
+                    <td><a class="odd-btn">2.02<br><small>1.00</small></a></td>
+                </tr>
 
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
+                <!-- Today Match -->
+                <tr>
+                    <td class="text-start px-3">
+                        <div class="match-layout">
+                            <span class="match-status today">Today<br><small>20:00</small></span>
+                            <div class="right-side">
+                                <div>Pakistan</div>
+                                <div>Bangladesh</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a class="odd-btn">1.42<br><small>13536.93</small></a></td>
+                    <td><a class="odd-btn">3.35<br><small>6.23</small></a></td>
+                    <td><a class="odd-btn">0<br><small>0</small></a></td>
+                </tr>
 
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>India</div>
-                                        <div>Australia</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Today</div>
-                                        <div>6:00 PM</div>
-                                    </div>
-
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
-
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>India</div>
-                                        <div>Australia</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Live</div>
-                                    </div>
-
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
-
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>India</div>
-                                        <div>Australia</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Today</div>
-                                        <div>6:00 PM</div>
-                                    </div>
-
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
-
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>Bhutan</div>
-                                        <div>Brazil</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Today</div>
-                                        <div>4:00 PM</div>
-                                    </div>
-
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
-
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>Cuba</div>
-                                        <div>England</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Cricket  -->
-                            <td class="text-start px-3">
-                                <div class="match-layout">
-                                    <!-- Left Side: Date & Time -->
-                                    <div class="left-side">
-                                        <div>Live</div>
-                                    </div>
-
-                                    <!-- Vertical Divider -->
-                                    <div class="middle-divider"></div>
-
-                                    <!-- Right Side: Teams -->
-                                    <div class="right-side">
-                                        <div>Italy</div>
-                                        <div>Iran</div>
-                                    </div>
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 1 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under X -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-
-                            <!-- Buttons under 2 -->
-                            <td>
-                                <div class="btn-pair-group">
-                                    <a class="btn btn-info btn-sm">-</a>
-
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
+                <!-- Tomorrow Match -->
+                <tr>
+                    <td class="text-start px-3">
+                        <div class="match-layout">
+                            <span class="match-status tomorrow">Tomorrow<br><small>05:30</small></span>
+                            <div class="right-side">
+                                <div>Victoria W</div>
+                                <div>Australia W</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a class="odd-btn">2.12<br><small>1.88</small></a></td>
+                    <td><a class="odd-btn">0<br><small>0</small></a></td>
+                    <td><a class="odd-btn">0<br><small>0</small></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
 @endsection

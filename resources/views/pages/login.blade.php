@@ -54,7 +54,7 @@
 
       <!-- Forgot Password -->
       <div class="mb-3 text-end">
-        <a href="javascript:void(0)">Forgot Password?</a>
+        <a href="{{ route('forgot_password') }}">Forgot Password?</a>
       </div>
 
       <!-- Or login with -->

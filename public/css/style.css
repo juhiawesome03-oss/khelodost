@@ -10,6 +10,7 @@ body {
 }
 
 /* Navbar css */
+/* Navbar base styles */
 .nav-link {
     background: #fff;
     color: #4a148c;
@@ -25,15 +26,23 @@ body {
 }
 
 .nav-link.active {
-    background: #81c0ff;
-    color: #fff !important;
+    background: #fff !important;      
+    color: #0c9971 !important;        
+    border-color: #0c9971;
 }
 
 .nav-link > span {
     margin-right: 6px;
 }
-.nav-link.active {
-    color: black !important;
+
+/* Hide scrollbar but allow scroll */
+.custom-scrollbar {
+    -ms-overflow-style: none;    
+    scrollbar-width: none;       
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;               
 }
 
 /* Container */
@@ -52,11 +61,10 @@ body {
 /* Left Sidebar */
 .layout-sidebar-left {
     flex: 0 0 25%;
-    max-width: 280px;
+    max-width: 350px;
     background-color: #f8f9fa;
-    border-right: 1px solid #ccc;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 5px;
     padding-bottom: 10px;
 }
 
@@ -64,8 +72,8 @@ body {
 .layout-content-center {
     flex: 1;
     background-color: #fff;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 20px;
 }
 
@@ -73,10 +81,9 @@ body {
 .layout-sidebar-right {
     flex: 0 0 25%;
     max-width: 400px;
-    background-color: #f8f9fa;
-    border-left: 1px solid #ccc;
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #f8f9fa;   
+    padding-left: 5px;
+    padding-right: 20px;
     padding-bottom: 10px;
 }
 
@@ -89,59 +96,55 @@ body {
     .layout-content-center {
         padding-left: 1px !important;
         padding-right: 1px !important;
+         margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 }
 
 /* index page */
-.btn-tab.active {
-    background-color: #212529 !important;
-    color: #28a745 !important;
-    border-color: #212529 !important;
-}
-
 .btn-tab {
-    font-size: clamp(0.7rem, 2vw, 1rem);
+    color: #282828;
+    background: none;
+    border: none;
+    padding: 0.35rem 0.35rem;
     white-space: nowrap;
+    text-decoration: none;
 }
 
+.btn-tab.active {
+    color: rgb(11, 155, 114);
+    font-weight: 600;
+}
+
+/* Uniform Image Sizes for Tabs */
 .tab-img {
-    height: 120px;
-    width: 180px;
+    height: 180px;
+    width: 150px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
-.card-slide {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Basic Card Cleanup */
+.card {
+    margin: 0.25rem !important;
+    padding: 0 !important;
 }
 
-.provider-img {
-    height: 70px;
-    max-width: 100%;
-    object-fit: contain;
+.card-body {
+    padding: 0.25rem 0.5rem !important;
 }
 
-.card-game-img {
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
+/*Scrollable Game Wrapper */
 .all_games {
     overflow-x: auto;
-    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.all_games::-webkit-scrollbar {
+.all_games::-webkit-scrollbar,
+.providers_slider::-webkit-scrollbar,
+.cards_slider::-webkit-scrollbar {
     display: none;
 }
 
@@ -149,93 +152,187 @@ body {
 .cards_slider {
     scroll-behavior: smooth;
     overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    gap: 0.25rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-.providers_slider::-webkit-scrollbar,
-.cards_slider::-webkit-scrollbar {
-    display: none;
+/* Minimize space between col-4 columns within sliders */
+.providers_slider .row,
+.cards_slider .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-/* Mobile specific changes */
+.providers_slider .col-4,
+.cards_slider .col-4 {
+    padding-left: 0.05rem !important; 
+    padding-right: 0.05rem !important;
+}
+
+/*Card-Slide/Other Components */
+.card-slide {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.provider-img {
+    height: 50px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-game-img {
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Specific overrides  */
+.card .card-body:has(.providers_slider),
+.card .card-body:has(.cards_slider) {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+}
+
+/* Mobile Responsive */
 @media (max-width: 576px) {
+    
     .tab-img {
-        height: 90px;
-        width: 140px;
+        height: 130px;
+        width: 110px;
     }
 
     .card-game-img {
-        height: 120px;
+        height: 130px;
+        width: 100%;
     }
 
-    /* Container ke liye full width aur 1 gap padding */
+    .provider-img {
+        height: 40px;
+    }
+
     .container {
         max-width: 100% !important;
-        padding-left: 0.1rem !important; 
+        padding-left: 0.1rem !important;
         padding-right: 0.1rem !important;
         padding-top: 0.1rem !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin: 0 !important;
     }
 
-    /* Main layout padding*/
     .layout-content-center.p-1 {
         padding: 0.25rem !important;
     }
 
-    /* Cards ke side margin*/
     .card {
         margin-left: 0.25rem !important;
         margin-right: 0.25rem !important;
     }
 
-    /* Scroll containers gap aur padding */
+    .card-body {
+        padding: 0.1rem 0.1rem !important;
+    }
+
     .all_games,
     .providers_slider,
     .cards_slider {
-        padding-left: 0.25rem !important;
-        padding-right: 0.25rem !important;
-        gap: 0.25rem !important;
+        padding-left: 0.1rem !important;
+        padding-right: 0.1rem !important;
+        gap: 0.1rem !important;
+    }
+
+    /* minimize column spacing on mobile */
+    .providers_slider .col-4,
+    .cards_slider .col-4 {
+        padding-left: 0.0rem !important;
+        padding-right: 0.0rem !important;
+    }
+
+    /* minimize on mobile for specific sections */
+    .card .card-body:has(.providers_slider),
+    .card .card-body:has(.cards_slider) {
+        padding-left: 0.0rem !important;
+        padding-right: 0.0rem !important;
     }
 }
-
 /* for all 1,X,2 design */
-.btn-pair-group {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+.odds-table tbody tr td {
+    vertical-align: middle;
 }
 
 .match-layout {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
-.left-side {
-    text-align: right;
-    font-size: 0.875rem;
-    color: #198754;
-    white-space: nowrap;
-    min-width: 70px;
+.match-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 65px;
+    text-align: center;
+    line-height: 1.2;
 }
 
-.middle-divider {
-    border-left: 2px solid #d6d6d6;
-    height: 40px;
+.match-status small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    display: block;
+}
+
+.match-status.live {
+    color: #28a745; 
+}
+
+.match-status.today {
+    color: #0d6efd; 
+}
+
+.match-status.tomorrow {
+    color: #fd7e14; 
 }
 
 .right-side {
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.2;
-}
-/* Indian game ka */
-html, body {
-    height: 100%;
-    overflow-x: hidden;
+    font-size: 0.9rem;
 }
 
+.odd-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: #a7d8fd;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s;
+}
+
+.odd-btn small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.odd-btn:hover {
+    background: #91c9f5;
+}
+
+/* Indian game ka */
 main {
     height: 100vh;
     overflow-y: auto;
@@ -272,7 +369,7 @@ main::-webkit-scrollbar {
     box-shadow: none;
 }
 
-/* 🔹 Provider button (jo repeat ho raha tha) */
+/* 🔹 Provider button  */
 .provider-btn {
     display: inline-block;
     padding: 0.5rem;           

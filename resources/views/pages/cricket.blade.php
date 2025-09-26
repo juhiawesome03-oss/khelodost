@@ -1,14 +1,13 @@
 @extends('sports_master')
 
 @section('sports_body')
-
 <main class="layout-content-center p-3">
     <div class="card shadow-sm mb-4">
         <div class="card-body p-0">
-            <table class="table table-bordered text-center mb-0 align-middle">
+            <table class="table text-center mb-0 align-middle odds-table">
                 <thead class="table-light">
                     <tr>
-                        <th class="text-start" style="width: 40%">🏏 Cricket</th>
+                        <th class="text-start fw-bold" style="width: 40%">🏏 Cricket</th>
                         <th style="width: 20%">1</th>
                         <th style="width: 20%">X</th>
                         <th style="width: 20%">2</th>
@@ -16,45 +15,30 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <!-- Cricket  -->
+                        <!-- Cricket -->
                         <td class="text-start px-3">
                             <div class="match-layout">
                                 <!-- Left Side: Date & Time -->
-                                <div class="left-side">
-                                    <div>Today</div>
-                                    <div>6:00 PM</div>
-                                </div>
-
-                                <!-- Vertical Divider -->
-                                <div class="middle-divider"></div>
+                                <span class="match-status today">Today<br><small>6:00 PM</small></span>
 
                                 <!-- Right Side: Teams -->
                                 <div class="right-side">
                                     <div>India</div>
-                                    <div>Sri Lanka</div>
+                                    <div>China</div>
                                 </div>
                             </div>
                         </td>
 
-                        <!-- Buttons under 1 -->
                         <td>
-                            <div class="btn-pair-group">
-                                <a class="btn btn-info btn-sm">2.32</a>
-                            </div>
+                            <a class="odd-btn">2.32<br><small>—</small></a>
                         </td>
 
-                        <!-- Buttons under X -->
                         <td>
-                            <div class="btn-pair-group">
-                                <a class="btn btn-info btn-sm">1.72</a>
-                            </div>
+                            <a class="odd-btn">1.72<br><small>—</small></a>
                         </td>
 
-                        <!-- Buttons under 2 -->
                         <td>
-                            <div class="btn-pair-group">
-                                <a class="btn btn-info btn-sm">0</a>
-                            </div>
+                            <a class="odd-btn">0<br><small>—</small></a>
                         </td>
                     </tr>
                 </tbody>

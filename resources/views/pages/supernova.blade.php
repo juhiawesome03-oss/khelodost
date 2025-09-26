@@ -5,7 +5,7 @@
         <div class="container indian-card-container">
 
             <!-- Top Scrollable Menu -->
-            <div class="overflow-hidden bg-white py-3">
+             <div class="overflow-hidden bg-white py-3">
                 <div class="d-flex gap-3 overflow-auto scrollbar-thin">
                     <a class="provider-btn" data-target="bt-ho-gaming">
                         <img src="{{ asset('images/logo-royal-gaming-sitio-1.png') }}" alt="Ho Gaming"
@@ -17,7 +17,7 @@
                     <a class="provider-btn" data-target="bt-royal-g">
                         <img src="{{ asset('images/smartsoft.webp') }}" alt="Royal G" class="nav-bar-logo-indian">
                     </a>
-                     <a class="provider-btn" data-target="bt-pribe">
+                    <a class="provider-btn" data-target="bt-pribe">
                         <img src="{{ asset('images/Onlyplay-logo.webp') }}" alt="Pribe" class="nav-bar-logo-indian">
                     </a>
                     <a class="provider-btn" data-target="bt-beter-live">
@@ -31,8 +31,10 @@
 
             <!-- Main Image Banner -->
             <div class="mb-3 rounded-3 overflow-hidden" style="height:200px;">
-                <img src="{{ asset('images/fa20c_1x2_97166bd5f2.jpg') }}" alt="Live Roulette" class="w-100 h-100">
-            </div>
+    <img src="{{ asset('images/supernowa_games_cover.jpeg') }}" 
+         alt="Live Roulette"
+         class="w-100 h-100">
+</div>
 
             <!-- Grid of Buttons -->
             <div class="row row-cols-2 row-cols-md-4 g-2">

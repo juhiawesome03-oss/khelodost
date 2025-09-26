@@ -1,55 +1,90 @@
+<style>
+  .sidebar-link {
+    display: block;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #212529;
+    text-decoration: none;
+    border-radius: 0.375rem;
+  }
+
+  .sidebar-link:hover {
+    background-color: #f8f9fa;
+  }
+
+  .aviator-link {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #212529;
+    text-decoration: none;
+  }
+
+  .aviator-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 0.375rem;
+  }
+
+  .sidebar-title {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 0rem -0.70rem;
+  }
+
+  .sidebar-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-section:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+
 <!-- Left Sidebar -->
 <div class="layout-sidebar-left layout-section">
   <div class="card shadow-sm rounded-3 d-none d-lg-block">
-  <div class="card-body">
+    <div class="card-body">
 
-    <!-- Aviator -->
-    <div class="mb-4">
-      <a href="#" class="d-block text-dark fw-bold text-decoration-none fs-5">
-        ✈️ Aviator
-      </a>
+      <!-- Aviator -->
+      <div class="sidebar-section">
+        <a href="#" class="aviator-link">🚀 Aviator</a>
+        <div class="sidebar-divider"></div>
+      </div>
+
+      <!-- Sports Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-title">Sports</div>
+        <a href="{{ route('cricket') }}" class="sidebar-link">🏏 Cricket</a>
+        <a href="{{ route('football') }}" class="sidebar-link">⚽ Football</a>
+        <a href="{{ route('tennis') }}" class="sidebar-link">🎾 Tennis</a>
+        <div class="sidebar-divider"></div>
+      </div>
+
+      <!-- Casino Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-title">Casino</div>
+        <a href="{{ route('indian_card_games') }}" class="sidebar-link">♠️ Indian Card Games</a>
+        <a href="{{ route('casino') }}" class="sidebar-link">🎰 Casino</a>
+        <a href="{{ route('1X2_gaming') }}" class="sidebar-link">🕹️ 1X2 Gaming</a>
+        <a href="{{ route('ezugi') }}" class="sidebar-link">🎲 Ezugi</a>
+        <a href="{{ route('supernova') }}" class="sidebar-link">✨ Supernova</a>
+        <a href="{{ route('slot_casino') }}" class="sidebar-link">🎰 Slot Casino</a>
+        <div class="sidebar-divider"></div>
+        <a href="#" class="sidebar-link">🏆 Sportsbook (80+)</a>
+      </div>
+
     </div>
-
-    <!-- Sports Section -->
-    <div class="mb-4">
-      <h6 class="text-uppercase text-muted small mb-3">Sports</h6>
-      <a href="{{ route('cricket') }}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🏏 Cricket
-      </a>
-      <a href="{{ route('football') }}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        ⚽ Football
-      </a>
-      <a href="{{ route('tennis') }}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🎾 Tennis
-      </a>
-    </div>
-
-    <!-- Casino Section -->
-    <div>
-      <h6 class="text-uppercase text-muted small mb-3">Casino</h6>
-      <a href="{{ route('indian_card_games') }}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🃏 Indian Card Games
-      </a>
-      <a href="{{ route('casino') }}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🎰 Casino
-      </a>
-      <a href="{{route('1X2_gaming')}}" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🎮 1X2 Gaming
-      </a>
-      <a href="#" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        ♟️ Ezugi
-      </a>
-      <a href="#" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🌟 Supernova
-      </a>
-      <a href="#" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🎲 Slot Casino
-      </a>
-      <a href="#" class="d-block text-dark text-decoration-none mb-2 py-1 rounded hover-bg-light">
-        🏆 Sportsbook (80+)
-      </a>
-    </div>
-
-  </div>
   </div>
 </div>

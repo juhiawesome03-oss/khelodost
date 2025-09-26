@@ -7,24 +7,24 @@
             <!-- Top Scrollable Menu -->
             <div class="overflow-hidden bg-white py-3">
                 <div class="d-flex gap-3 overflow-auto scrollbar-thin">
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-ho-gaming">
+                     <a class="provider-btn" data-target="bt-royal-g">
+                        <img src="{{ asset('images/smartsoft.webp') }}" alt="Royal G" class="nav-bar-logo-indian">
+                    </a>
+                    <a class="provider-btn" data-target="bt-royal-g">
+                        <img src="{{ asset('images/play-n-go-logo.png') }}" alt="Royal G" class="nav-bar-logo-indian">
+                    </a>
+                    <a class="provider-btn" data-target="bt-pribe">
+                        <img src="{{ asset('images/Onlyplay-logo.webp') }}" alt="Pribe" class="nav-bar-logo-indian">
+                    </a>
+                    <a class="provider-btn" data-target="bt-beter-live">
+                        <img src="{{ asset('images/HOgaming.webp') }}" alt="Beter Live" class="nav-bar-logo-indian">
+                    </a>
+                    <a class="provider-btn" data-target="bt-ho-gaming">
                         <img src="{{ asset('images/logo-royal-gaming-sitio-1.png') }}" alt="Ho Gaming"
                             class="nav-bar-logo-indian">
                     </a>
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-pribe">
-                        <img src="{{ asset('images/Onlyplay-logo.webp') }}" alt="Pribe" class="nav-bar-logo-indian">
-                    </a>
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-beter-live">
-                        <img src="{{ asset('images/HOgaming.webp') }}" alt="Beter Live" class="nav-bar-logo-indian">
-                    </a>
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-royal-g">
-                        <img src="{{ asset('images/smartsoft.webp') }}" alt="Royal G" class="nav-bar-logo-indian">
-                    </a>
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-evolution">
+                    <a class="provider-btn" data-target="bt-evolution">
                         <img src="{{ asset('images/BetGames-logo.png') }}" alt="Evolution" class="nav-bar-logo-indian">
-                    </a>
-                    <a class="btn btn-light rounded-3 p-2 flex-shrink-0" data-target="bt-royal-g">
-                        <img src="{{ asset('images/play-n-go-logo.png') }}" alt="Royal G" class="nav-bar-logo-indian">
                     </a>
                 </div>
             </div>

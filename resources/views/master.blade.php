@@ -19,6 +19,9 @@
     </div>
 
     @yield('js')
+    <div class="footer_part w-full">
+        @include('footer')
+    </div>
 </body>
 
 </html>
