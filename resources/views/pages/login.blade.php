@@ -46,10 +46,10 @@
         </div>
       </div>
 
-      <!-- Login Buttons as links -->
+      <!-- Login Buttons -->
       <div class="d-grid gap-2 mb-3">
         <a href="javascript:void(0)" class="btn btn-yellow text-center">Login</a>
-        <a href="javascript:void(0)" class="btn btn-yellow text-center">Login With Demo ID</a>
+        <a href="javascript:void(0)" onclick="demoLogin()" class="btn btn-yellow text-center">Login With Demo ID</a>
       </div>
 
       <!-- Forgot Password -->
@@ -73,5 +73,11 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function demoLogin() {
+      localStorage.setItem('demo_login', 'true');
+      window.location.href = "{{ route('index') }}";
+    }
+  </script>
 </body>
 </html>

@@ -53,3 +53,20 @@ Route::get('/supernova', function () {
 Route::get('/slot_casino', function () {
     return view('pages.slot_casino');
 })->name('slot_casino');
+
+// Account page 
+Route::get('/withdraw', function () {
+    return view('accounts.withdraw');
+})->name('withdraw');
+
+Route::get('/account_statement', function () {
+    return view('accounts.account_statement');
+})->name('account_statement');
+
+Route::get('/open_bets', function () {
+    return view('accounts.open_bets');
+})->name('open_bets');
+
+Route::get('/profit_loss_event', function () {
+    return view('accounts.profit_loss_event');
+})->name('profit_loss_event');
