@@ -78,3 +78,7 @@ Route::get('/profit_loss_event', function () {
 Route::get('/change_password', function () {
     return view('accounts.change_password');
 })->name('change_password');
+
+Route::get('/account_setting', function () {
+    return view('accounts.account_setting');
+})->name('account_setting');
