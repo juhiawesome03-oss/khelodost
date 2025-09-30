@@ -36,9 +36,9 @@
 </div>
 
 <!-- Bottom Action Buttons -->
-<div class="bottom-buttons">
+{{-- <div class="bottom-buttons">
   <a href="javascript:void(0)" class="bottom-btn">Show Withdraw History</a>
   <a href="javascript:void(0)" class="bottom-btn">Add Withdraw Method</a>
-</div>
+</div> --}}
 </main>
 @endsection

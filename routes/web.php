@@ -55,6 +55,10 @@ Route::get('/slot_casino', function () {
 })->name('slot_casino');
 
 // Account page 
+Route::get('/deposit', function () {
+    return view('accounts.deposit');
+})->name('deposit'); 
+
 Route::get('/withdraw', function () {
     return view('accounts.withdraw');
 })->name('withdraw');
@@ -70,3 +74,7 @@ Route::get('/open_bets', function () {
 Route::get('/profit_loss_event', function () {
     return view('accounts.profit_loss_event');
 })->name('profit_loss_event');
+
+Route::get('/change_password', function () {
+    return view('accounts.change_password');
+})->name('change_password');
