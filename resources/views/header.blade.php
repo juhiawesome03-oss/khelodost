@@ -114,7 +114,7 @@
             </div>
 
             <div class="d-flex gap-2">
-                <a href="#" class="btn btn-success flex-fill fw-bold">➕ Deposit</a>
+                <a href="{{ route('deposit') }}" class="btn btn-success flex-fill fw-bold">➕ Deposit</a>
                 <a href="{{ route('withdraw') }}" class="btn btn-danger flex-fill fw-bold">➖ Withdraw</a>
             </div>
         </div>
@@ -139,7 +139,7 @@
         </div>
 
         <div class="ms-3 border-top">
-            <a href="#" class="d-block py-2 px-3 text-decoration-none text-dark border-bottom">🛠️ Settings</a>
+            <a href="{{ route('account_setting') }}" class="d-block py-2 px-3 text-decoration-none text-dark border-bottom">🛠️ Settings</a>
         </div>
 
         <!-- Account Actions Section -->
@@ -148,7 +148,7 @@
         </div>
 
         <div class="ms-3 border-top">
-            <a href="#" class="d-block py-2 px-3 text-decoration-none text-dark border-bottom">🔑 Change
+            <a href="{{ route('change_password') }}" class="d-block py-2 px-3 text-decoration-none text-dark border-bottom">🔑 Change
                 Password</a>
             <a href="#" class="d-block py-2 px-3 text-decoration-none text-dark border-bottom"
                 onclick="signOut()">🚪 Sign Out</a>
